@@ -15,27 +15,24 @@
             <DataGrid ItemsSource="{Binding ListDays}" ></DataGrid>
         </Grid>
         <Grid Grid.Column="1" Margin="10">
-            <DataGrid ItemsSource="{Binding ListTasks}">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Task}" Width="*" Header="Task">
-                    </DataGridTextColumn>
-                    <DataGridTemplateColumn Width="*" Header="Deleted">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Content="Delete" Background="Red" Command="{Binding DeleteCommand}"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Width="*" Header="Completed">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Content="Complete" Background="Green" Command="{Binding CompleteCommand}"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>
-            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <DataGrid CanUserDeleteRows="False" 
+                          CanUserReorderColumns="False" 
+                          ItemsSource="{Binding ListTasks}"
+                          SelectedItem="{Binding SelectedTask}">
+                </DataGrid>
+                <Grid Grid.Row="1">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Command="{Binding AddCommand}" Width="100" Content="Add more"></Button>
+                        <Button Command="{Binding DeleteCommand}" Width="100" Content="Delete"></Button>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
         </Grid>
     </Grid>
 </Window>

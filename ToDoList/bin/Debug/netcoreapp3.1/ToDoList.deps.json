@@ -8,14 +8,21 @@
     ".NETCoreApp,Version=v3.1": {
       "ToDoList/1.0.0": {
         "dependencies": {
+          "PropertyChanged.Fody": "3.4.1",
           "System.ObjectModel": "4.3.0"
         },
         "runtime": {
           "ToDoList.dll": {}
         }
       },
+      "Fody/6.6.2": {},
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
+      "PropertyChanged.Fody/3.4.1": {
+        "dependencies": {
+          "Fody": "6.6.2"
+        }
+      },
       "System.Collections/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -114,6 +121,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Fody/6.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/PISk/t+lnNm0tiAc3xer3wp7HVnDCkX7gyTzljbC9kygUBJpYU2V1P/MjJeu/C6JhR40QXr9XdoxvqRmaHlhg==",
+      "path": "fody/6.6.2",
+      "hashPath": "fody.6.6.2.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -127,6 +141,13 @@
       "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "PropertyChanged.Fody/3.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-e0BVdf9bFdjvOMEcYff5jUdvMC36ioHN1Lp7bW1bz0Qjg3rqsfCUhaaIu+K7R9TKBGeX7PlfqAeMqKyrD9cBXw==",
+      "path": "propertychanged.fody/3.4.1",
+      "hashPath": "propertychanged.fody.3.4.1.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",

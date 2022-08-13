@@ -18,3 +18,5 @@ D:\sourceCs\ToDoList\ToDoList\ToDoList\obj\Debug\netcoreapp3.1\ToDoList.csproj.C
 D:\sourceCs\ToDoList\ToDoList\ToDoList\obj\Debug\netcoreapp3.1\ToDoList.dll
 D:\sourceCs\ToDoList\ToDoList\ToDoList\obj\Debug\netcoreapp3.1\ToDoList.pdb
 D:\sourceCs\ToDoList\ToDoList\ToDoList\obj\Debug\netcoreapp3.1\ToDoList.genruntimeconfig.cache
+D:\sourceCs\ToDoList\ToDoList\ToDoList\obj\Debug\netcoreapp3.1\ToDoList.csproj.Fody.CopyLocal.cache
+D:\sourceCs\ToDoList\ToDoList\ToDoList\obj\Debug\netcoreapp3.1\ToDoList.csproj.Fody.RuntimeCopyLocal.cache
