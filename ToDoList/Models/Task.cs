@@ -6,12 +6,15 @@ namespace ToDoList.Models
 {
     public class Task
     {
-        public Guid Id { get; set; }
         public string TaskName { get; set; }
         public bool IsDone { get; set; }
+        public Guid DayId{ get; set; }
+        public Day Day{ get; set; }
+        public Guid Id { get; internal set; }
+
         public Task (string taskName)
         {
-            Id = Guid.NewGuid(); 
+            Id = Guid.NewGuid ();   
             TaskName = taskName; 
         }
     }

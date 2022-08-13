@@ -12,7 +12,19 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0" Margin="10">
-            <DataGrid SelectedItem="{Binding SelectedDate}" ItemsSource="{Binding ListDates}" ></DataGrid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <DataGrid 
+                SelectedItem="{Binding SelectedDate}" 
+                ItemsSource="{Binding ListDates}" 
+                                
+                >
+            </DataGrid>
+            <Grid Grid.Row="2">
+                <Button Content="Add Day" Command="{Binding AddDateCommand}"></Button>
+            </Grid>
         </Grid>
         <Grid Grid.Column="1" Margin="10">
             <Grid>
