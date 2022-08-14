@@ -18,7 +18,7 @@ namespace ToDoList.Repository
             modelBuilder
                 .Entity<Day>().HasKey(r => r.Id);
             modelBuilder
-                  .Entity<Task>().HasKey(r => r.Id);
+                .Entity<Task>().HasKey(r => r.Id);
             modelBuilder
                 .Entity<Task>()
                     .HasOne<Day>(s => s.Day)

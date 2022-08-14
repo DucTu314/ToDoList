@@ -12,9 +12,10 @@ namespace ToDoList.Models
         public Day Day{ get; set; }
         public Guid Id { get; internal set; }
 
-        public Task (string taskName)
+        public Task (string taskName, Guid dayId)
         {
-            Id = Guid.NewGuid ();   
+            Id = Guid.NewGuid ();
+            DayId = dayId;
             TaskName = taskName; 
         }
     }

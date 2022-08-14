@@ -19,8 +19,12 @@
             <DataGrid 
                 SelectedItem="{Binding SelectedDate}" 
                 ItemsSource="{Binding ListDates}" 
-                                
+                AutoGenerateColumns="False"
                 >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Date"  Binding="{Binding Date}">
+                    </DataGridTextColumn>
+                 </DataGrid.Columns>
             </DataGrid>
             <Grid Grid.Row="2">
                 <Button Content="Add Day" Command="{Binding AddDateCommand}"></Button>
@@ -32,16 +36,25 @@
                     <RowDefinition Height="10*"></RowDefinition>
                     <RowDefinition Height="1*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <DataGrid 
+                <DataGrid
                           CanUserDeleteRows="False" 
                           CanUserReorderColumns="False" 
-                          ItemsSource="{Binding ListTasks}"
-                          SelectedItem="{Binding SelectedTask}">
+                          ItemsSource="{Binding ListTasks, UpdateSourceTrigger=LostFocus}"
+                          SelectedItem="{Binding SelectedTask}"
+                          
+                          AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="TaskName"  Binding="{Binding TaskName, UpdateSourceTrigger=LostFocus}">
+                        </DataGridTextColumn>
+                        <DataGridCheckBoxColumn Header="IsDone?"  Binding="{Binding IsDone, UpdateSourceTrigger=LostFocus}">
+                        </DataGridCheckBoxColumn>
+                    </DataGrid.Columns>
                 </DataGrid>
                 <Grid Grid.Row="1">
                     <StackPanel Orientation="Horizontal">
                         <Button Command="{Binding AddCommand}" Width="100" Content="Add more"></Button>
                         <Button Command="{Binding DeleteCommand}" Width="100" Content="Delete"></Button>
+                        <Button Command="{Binding SaveCommand}" Width="100" Content="Save"></Button>
                     </StackPanel>
                 </Grid>
             </Grid>
